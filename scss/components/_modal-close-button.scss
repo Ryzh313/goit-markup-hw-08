@@ -1,0 +1,31 @@
+.modal-close-button {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    right: 8px;
+    top: 8px;
+
+    @include flex-center;
+
+    background: var(--primery-white-color);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.modal-close-button__icon {
+    fill: var(--accent-black-color);
+
+    transition: fill 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    
+    .modal-close-button:focus & {
+            fill: var(--accent-blue-color);
+        }
+
+    &:hover {
+            fill: var(--accent-blue-color);
+        }
+
+}
+

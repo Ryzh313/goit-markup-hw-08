@@ -1,0 +1,44 @@
+.social__list {
+    @include flex-center;
+
+    gap: 10px;
+}
+
+.footer .social__link {
+    background: rgba(255, 255, 255, 0.1);
+
+}
+
+.footer .social__icon {
+    fill: var(--primery-white-color);
+}
+
+.social__link {
+    @include flex-center;
+    
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    outline: transparent;
+
+    transition: background-color 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+        &:hover,
+        &:focus {
+                background-color: var(--accent-blue-color);
+            }
+}
+
+.social__icon {
+    fill: #afb1b8;
+
+    transition: fill 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+        .social__link:hover &,
+        .social__link:focus & {
+            fill: var(--primery-white-color);
+        }
+}
+
