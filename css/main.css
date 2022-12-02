@@ -43,6 +43,7 @@ ol {
 
 img {
   display: block;
+  max-width: 100%;
 }
 
 ul {
@@ -97,16 +98,33 @@ body {
   color: var(--accent-black-color);
   font-family: "raleway", sans-serif;
   font-weight: 700;
-  font-size: 26px;
-  line-height: 1.19;
+  font-size: 24px;
+  line-height: 1.17;
   letter-spacing: 0.03em;
   text-decoration: none;
 }
+@media screen and (min-width: 1200px) {
+  .logo {
+    font-size: 26px;
+    line-height: 1.19;
+  }
+}
 
 .header__logo {
-  padding-top: 24px;
-  padding-bottom: 25px;
-  margin-right: 93px;
+  padding: 16px 0;
+}
+@media screen and (min-width: 768px) {
+  .header__logo {
+    padding: 26px 0;
+    margin-right: 88px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .header__logo {
+    padding-top: 24px;
+    padding-bottom: 25px;
+    margin-right: 93px;
+  }
 }
 
 .logo__blue {
@@ -415,6 +433,18 @@ body {
   fill: var(--accent-blue-color);
 }
 
+.mobile-menu {
+  background-color: #fff;
+}
+.mobile-menu .mobile-menu__menu-button {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.mobile-menu .menu-social {
+  display: flex;
+}
+
 .header {
   border-bottom: 1px solid var(--header-line-color);
 }
@@ -475,15 +505,20 @@ body {
 @media screen and (min-width: 768px) {
   .contacts {
     display: flex;
+    flex-direction: column;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .contacts {
+    display: flex;
     align-items: center;
+    flex-direction: row;
   }
 }
 
 .contacts__link {
   display: flex;
   align-items: center;
-  padding-top: 32px;
-  padding-bottom: 32px;
   color: var(--secondary-text-color);
   font-weight: 500;
   font-size: 14px;
@@ -491,13 +526,29 @@ body {
   letter-spacing: 0.02em;
 }
 
-.contacts__icon {
-  fill: currentColor;
-  margin-right: 10px;
+.contacts__item:first-child {
+  margin-bottom: 10px;
+}
+@media screen and (min-width: 1200px) {
+  .contacts__item:first-child {
+    margin-bottom: 0;
+  }
 }
 
-.contacts__item:not(:first-child) {
-  margin-left: 50px;
+.contacts__icon {
+  fill: currentColor;
+  margin-right: 8px;
+}
+@media screen and (min-width: 1200px) {
+  .contacts__icon {
+    margin-right: 10px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .contacts__item:not(:first-child) {
+    margin-left: 50px;
+  }
 }
 
 .hero {

@@ -7,8 +7,8 @@
     @include flex-center;
 
     @include tablet {
-            display: none;
-        }
+        display: none;
+    }
 
 }
 
@@ -21,3 +21,4 @@
         fill:var(--accent-blue-color);
     }
 }
+
