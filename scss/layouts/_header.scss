@@ -13,8 +13,13 @@
 }
 
 .menu-nav {
-    display: flex;
-    align-items: center;
+display: none;    
+
+    @include tablet {
+        display: flex;
+        align-items: center;
+
+    }
 }
 
 .menu-nav__item:not(:last-child) {
@@ -51,8 +56,14 @@
 }
 
 .contacts {
+display: none;
+
+@include tablet {
     display: flex;
     align-items: center;
+}
+
+    
 }
 
 .contacts__link {

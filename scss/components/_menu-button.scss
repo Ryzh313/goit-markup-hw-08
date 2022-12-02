@@ -15,6 +15,9 @@
 .menu-button__icon {
     width: 40px;
     height: 40px;
-
-    // fill:var(--accent-black-color);
+    
+    .menu-button:hover &, 
+    .menu-button:focus & {
+        fill:var(--accent-blue-color);
+    }
 }
