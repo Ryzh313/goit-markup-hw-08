@@ -787,6 +787,11 @@ body {
 .works {
   padding-top: 0;
 }
+@media screen and (max-width: 1199px) {
+  .works {
+    display: none;
+  }
+}
 
 .works__list {
   display: flex;
