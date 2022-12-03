@@ -1,12 +1,13 @@
 .clients__list {
     display: flex;
+    flex-wrap: wrap;
     gap: 30px;
 }
 
 .clients__link {
     @include flex-center;
 
-    width: 170px;
+    width: 210px;
     height: 92px;
     border: 1px solid #afb1b8;
     border-radius: 4px;
@@ -19,6 +20,14 @@
     &:hover,
     &:focus {
             border-color: var(--accent-blue-color);
+        }
+
+        @include tablet {
+            width: 226px;
+        }
+
+        @include desktop {
+            width: 170px;
         }
 }
 

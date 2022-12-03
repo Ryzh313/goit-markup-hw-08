@@ -142,7 +142,7 @@ body {
 }
 
 .main-title {
-  margin-bottom: 50px;
+  margin-bottom: 30px;
   font-size: 28px;
   line-height: 1.19;
   text-align: center;
@@ -150,6 +150,7 @@ body {
 }
 @media screen and (min-width: 1200px) {
   .main-title {
+    margin-bottom: 50px;
     font-size: 36px;
     line-height: 1.17;
   }
@@ -882,6 +883,7 @@ body {
 
 .clients__list {
   display: flex;
+  flex-wrap: wrap;
   gap: 30px;
 }
 
@@ -889,7 +891,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 170px;
+  width: 210px;
   height: 92px;
   border: 1px solid #afb1b8;
   border-radius: 4px;
@@ -899,6 +901,16 @@ body {
 }
 .clients__link:hover, .clients__link:focus {
   border-color: var(--accent-blue-color);
+}
+@media screen and (min-width: 768px) {
+  .clients__link {
+    width: 226px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .clients__link {
+    width: 170px;
+  }
 }
 
 .clients__icon {
