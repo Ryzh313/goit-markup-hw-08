@@ -6,18 +6,64 @@
 }
 
 .footer__container {
+    display: flex;    
+    justify-content: center;
+    flex-direction: column;    
+
+    @include tablet {
+            flex-wrap: wrap;
+            // align-items: baseline;
+            // gap: 93px;
+        }
+
+    @include desktop {
+        flex-direction: row;
+        align-items: baseline;
+        gap: 93px;
+    }    
+}
+
+.footer__address-container,
+.footer__social-container,
+.subscribe__input-form {
     display: flex;
-    align-items: baseline;
-    gap: 93px;
+    flex-direction: column;
+    align-items: center;
+    
+    @include desktop {
+        display: block;
+        flex-direction: row;
+    }
+}
+
+.footer__social-container {
+    margin: 60px 0;
+
+    @include desktop {
+        margin: 0;
+    }
 }
 
 .address {
     margin-top: 20px;
 }
 
+.address__item {
+    text-align: center;
+
+    @include desktop {
+        text-align: left;
+    }
+}
+
 .address__item:nth-child(2n) {
-    margin-top: 9px;
-    margin-bottom: 9px;
+    margin-top: 8px;
+    margin-bottom: 8px;
+
+    @include desktop {
+        margin-top: 9px;
+        margin-bottom: 9px;
+    }
 }
 
 .address__link-map {
@@ -37,13 +83,14 @@
         }
 }
 
-.address__link {
-    color: var(--transparency-white-color);
+.address__link {    
 
     font-size: 14px;
     line-height: 1.71;
     font-style: normal;
     letter-spacing: 0.03em;
+
+    color: var(--transparency-white-color);
 
     transition: color 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -55,6 +102,8 @@
 }
 
 .footer__title {
+    text-align: center;
+    
     margin-bottom: 20px;
 
     font-size: 14px;
@@ -63,11 +112,19 @@
     text-transform: uppercase;
 
     color: var(--primery-white-color);
+
+    @include desktop {
+        text-align: left;
+    }
 }
 
 .subscribe {
+
+    @include desktop{
     width: 570px;
     height: 86px;
+    }
+    
 }
 
 .subscribe__input-form {
@@ -75,9 +132,9 @@
 }
 
 .subscribe__email-input {
-    width: 358px;
+    width: 100%;
     height: 50px;
-    margin-right: 12px;
+    margin-bottom: 20px;
     padding: 15px 16px;
 
     color: rgba(255, 255, 255, 0.6);
@@ -96,4 +153,10 @@
         &:focus {
             border-color: var(--accent-blue-color);
             }
+
+        @include desktop {
+            width: 358px;
+            margin-right: 12px;
+            margin-bottom: 0;
+        }    
 }

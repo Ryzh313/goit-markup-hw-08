@@ -947,17 +947,69 @@ body {
 
 .footer__container {
   display: flex;
-  align-items: baseline;
-  gap: 93px;
+  justify-content: center;
+  flex-direction: column;
+}
+@media screen and (min-width: 768px) {
+  .footer__container {
+    flex-wrap: wrap;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .footer__container {
+    flex-direction: row;
+    align-items: baseline;
+    gap: 93px;
+  }
+}
+
+.footer__address-container,
+.footer__social-container,
+.subscribe__input-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+@media screen and (min-width: 1200px) {
+  .footer__address-container,
+.footer__social-container,
+.subscribe__input-form {
+    display: block;
+    flex-direction: row;
+  }
+}
+
+.footer__social-container {
+  margin: 60px 0;
+}
+@media screen and (min-width: 1200px) {
+  .footer__social-container {
+    margin: 0;
+  }
 }
 
 .address {
   margin-top: 20px;
 }
 
+.address__item {
+  text-align: center;
+}
+@media screen and (min-width: 1200px) {
+  .address__item {
+    text-align: left;
+  }
+}
+
 .address__item:nth-child(2n) {
-  margin-top: 9px;
-  margin-bottom: 9px;
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
+@media screen and (min-width: 1200px) {
+  .address__item:nth-child(2n) {
+    margin-top: 9px;
+    margin-bottom: 9px;
+  }
 }
 
 .address__link-map {
@@ -974,11 +1026,11 @@ body {
 }
 
 .address__link {
-  color: var(--transparency-white-color);
   font-size: 14px;
   line-height: 1.71;
   font-style: normal;
   letter-spacing: 0.03em;
+  color: var(--transparency-white-color);
   transition: color 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -987,6 +1039,7 @@ body {
 }
 
 .footer__title {
+  text-align: center;
   margin-bottom: 20px;
   font-size: 14px;
   line-height: 1.14;
@@ -994,10 +1047,17 @@ body {
   text-transform: uppercase;
   color: var(--primery-white-color);
 }
+@media screen and (min-width: 1200px) {
+  .footer__title {
+    text-align: left;
+  }
+}
 
-.subscribe {
-  width: 570px;
-  height: 86px;
+@media screen and (min-width: 1200px) {
+  .subscribe {
+    width: 570px;
+    height: 86px;
+  }
 }
 
 .subscribe__input-form {
@@ -1005,9 +1065,9 @@ body {
 }
 
 .subscribe__email-input {
-  width: 358px;
+  width: 100%;
   height: 50px;
-  margin-right: 12px;
+  margin-bottom: 20px;
   padding: 15px 16px;
   color: rgba(255, 255, 255, 0.6);
   background-color: #2f303a;
@@ -1020,4 +1080,11 @@ body {
 }
 .subscribe__email-input:hover, .subscribe__email-input:focus {
   border-color: var(--accent-blue-color);
+}
+@media screen and (min-width: 1200px) {
+  .subscribe__email-input {
+    width: 358px;
+    margin-right: 12px;
+    margin-bottom: 0;
+  }
 }/*# sourceMappingURL=main.css.map */
