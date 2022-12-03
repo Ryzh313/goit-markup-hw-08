@@ -1,17 +1,40 @@
-.features {
-    padding-bottom: 94px;
-}
+// .features {
+//     padding-bottom: 94px;
+// }
 
 .features__list {
     display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 30px;
+
+    @include tablet {
+        flex-direction: row;
+    }
+
+    @include desktop {
+        flex-direction: row;
+        align-items: start;    
+        
+        
+    }
 }
 
 .features__item {
-    width: 270px;
+    width: 100%;
+    
 
-    &:not(:last-child) {
-            margin-right: 30px;
-        }
+    @include tablet {
+        width: 354px;
+    }
+
+
+    @include desktop {
+        width: 270px;    
+        
+            
+    }
 }
 
 .features__icon-container {
@@ -24,6 +47,7 @@
 }
 
 .features__title {
+    text-align: center;
     margin-bottom: 10px;
 
     font-size: 14px;
