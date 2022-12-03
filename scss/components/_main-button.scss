@@ -26,10 +26,11 @@
 }
 
 .hero .main-button {
-    width: 216px;
-
-    display: block;
-    text-align: center;
+    @include desktop {
+        width: 216px;        
+        display: block;
+        text-align: center;
+    }
 }
 
 
