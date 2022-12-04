@@ -1,11 +1,11 @@
 .clients__list {
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: wrap;    
     gap: 30px;
 }
 
 .clients__link {
-    @include flex-center;
+    @include flex-center;    
 
     width: 210px;
     height: 92px;
