@@ -57,6 +57,10 @@
 
 .mobile-menu__nav {
     margin-bottom: 302px;
+    
+    @media screen and (max-width: 430px) {
+            margin-bottom: 202px;
+        }
 }
 
 .mobile-menu__item:not(:last-child) {
@@ -71,6 +75,10 @@
     letter-spacing: 0.02em;
     
     color: var(--primery-black-color);
+
+    @media screen and (max-width: 430px) {
+            font-size: 32px;
+        }
 }
 
 .current-blue {
@@ -89,6 +97,10 @@ margin-bottom: 32px;
     letter-spacing: 0.02em;
 
     color: var(--accent-blue-color);
+
+    @media screen and (max-width: 430px) {
+            font-size: 24px;
+        }
 }
 
 .menu-contacts__email {
@@ -99,16 +111,22 @@ margin-bottom: 32px;
         letter-spacing: 0.02em;
     
         color:var(--secondary-text-color);
+
+        @media screen and (max-width: 430px) {
+                font-size: 16px;
+            }
 }
 
 .menu-social {
     display: flex;
+    flex-wrap: wrap;
     gap: 20px;
 
     margin-top: 64px;
 }
 
 .menu-social__link {
+    
     padding-right: 10px;
     
         font-weight: 500;
