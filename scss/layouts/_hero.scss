@@ -61,6 +61,11 @@
     letter-spacing: 0.06em;
     text-transform: uppercase;
 
+    @media screen and(max-width: 390px) {
+        max-width: 390px;
+        font-size: 20px;
+    }
+
     @include desktop {
     max-width: 696px;
 
